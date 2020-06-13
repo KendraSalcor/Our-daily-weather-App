@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our daily weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700;800&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/cd7f0125ce.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="card-app">
+        <div class="title">
+            Our daily weather
+        </div>
+
+        <div class="container1">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="typeweather" id="description">
+
+                        </div>
+
+                        <span class="mainTemperature" id="currentTemp">
+                            26
+                        </span>
+                        <div class="degrees">
+                            <span id="celcius">
+                                ℃
+                            </span>
+
+                            <span id="farenheit">
+
+                            </span>
+                        </div>
+
+                        <div class="minimun">
+                            Minimun temperature
+                            <span id="miniTemp">
+                                18°
+                            </span>
+                        </div>
+
+                        <div class="propertiesweather">
+                            <span class="wind">
+                                Wind
+                            </span>
+                            <span>
+                                Humidity
+                            </span>
+                        </div>
+
+                        <div class="numberproperties">
+                            <span class="wind2" id="windElement">
+
+                            </span>
+                            <span id="humidityElement">
+
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col second">
+                        <div class="location">
+
+
+                            <form id="search-place">
+                                <input type="text" id="cityInput" placeholder="New location" />
+                                <input type="button" value="Search" id="searchCity"></input>
+
+                            </form>
+                        </div>
+                        <button class="newbutton" id="currentButton">
+                            I'm here
+                        </button>
+                        <div class="citycountry">
+                            <h2 class="city" id="newCity">
+
+                            </h2>
+                            <h3 class="country" id="nameCountry">
+
+                            </h3>
+                        </div>
+                        <div id="local-time">
+                            <h4 id="dayMonth">
+                                Friday, May 15
+                            </h4>
+                            <h5>
+                                <time>18:45:39</time>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="illustration1"></div>
+        </div>
+
+        <div class="second-title">
+            Get ready for the next days
+        </div>
+
+        <div class="last-card">
+            <div class="day">
+                <div class="name">
+                    Saturday
+                </div>
+                <div class="picture">
+                    <img src="src/img/cloudy-weather.gif" />
+                </div>
+
+                <div temp-container style="margin-top: 10px;">
+                    <div class="tempt">
+                        21°
+                    </div>
+                    /
+                    <div class="tempt">
+                        16°
+                    </div>
+                </div>
+            </div>
+
+            <div class="day week">
+                <div class="name">
+                    Sunday
+                </div>
+                <div class="picture">
+                    <img src="src/img/rainy-weather.gif" />
+                </div>
+
+                <div temp-container style="margin-top: 10px;">
+                    <div class="tempt">
+                        24°
+                    </div>
+                    /
+                    <div class="tempt">
+                        14°
+                    </div>
+                </div>
+            </div>
+
+            <div class="day week">
+                <div class="name">
+                    Monday
+                </div>
+                <div class="picture">
+                    <img src="src/img/sun-weather.gif" />
+                </div>
+
+                <div temp-container style="margin-top: 10px;">
+                    <div class="tempt">
+                        25°
+                    </div>
+                    /
+                    <div class="tempt">
+                        18°
+                    </div>
+                </div>
+            </div>
+
+            <div class="day week">
+                <div class="name">
+                    Tuesday
+                </div>
+                <div class="picture">
+                    <img src="src/img/sun-weather.gif" />
+                </div>
+                <div temp-container style="margin-top: 10px;">
+                    <div class="tempt">
+                        27°
+                    </div>
+                    /
+                    <div class="tempt">
+                        17°
+                    </div>
+                </div>
+            </div>
+
+            <div class="day week">
+                <div class="name">
+                    Wednesday
+                </div>
+                <div class="picture">
+                    <img src="src/img/sun-weather.gif" />
+                </div>
+                <div temp-container style="margin-top: 10px;">
+                    <div class="tempt">
+                        28°
+                    </div>
+                    /
+                    <div class="tempt">
+                        19°
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/index.js"></script>
+</body>
+
+</html>
+
+<script src="src/index.js"></script>
