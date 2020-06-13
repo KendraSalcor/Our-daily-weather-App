@@ -161,9 +161,10 @@ footer {
 
 .minimun {
   display: inline-block;
-  font-size: 12px;
+  font-size: 14px;
   width: 100%;
   font-weight: bold;
+  padding-top: 15px;
 }
 .propertiesweather {
   font-family: "Alegreya Sans", sans-serif;
