@@ -34,7 +34,7 @@
   display: block;
   margin: auto;
   background-color: #fff;
-  background-image: url(src/img/Sunny.svg);
+  background-image: url(img/Sunny.svg);
   background-repeat: no-repeat;
   background-size: 322px 356px;
   background-position: center;
@@ -139,6 +139,10 @@ h4 {
 }
 h5 {
   font-size: 14px;
+}
+footer {
+  text-align: center;
+  margin-top: 10px;
 }
 
 .mainTemperature {
