@@ -92,6 +92,16 @@ function showWeather(response) {
   windSpeed.innerHTML = `${Wind} m/s`;
 }
 
+function convertToFarenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentTemp");
+  let temperature = temperatureElement.innerHTML;
+  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+}
+
+let fahrenheitlink = document.querySelector("#fahrenheit-link");
+fahrenheitlink.addEventListener("click", convertToFarenheit);
+
 function showPosition(position) {
   console.log(position.coords.latitude);
   console.log(position.coords.longitude);

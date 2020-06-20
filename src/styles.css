@@ -212,6 +212,11 @@ footer {
   color: #95389e;
 }
 
+#fahrenheit {
+  text-decoration: none;
+  color: #95389e;
+}
+
 .picture {
   width: 48px;
   height: 48px;
