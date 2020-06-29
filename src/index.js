@@ -125,6 +125,15 @@ function convertToFarenheit(event) {
 let fahrenheitlink = document.querySelector("#fahrenheit");
 fahrenheitlink.addEventListener("click", convertToFarenheit);
 
+function showCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentTemp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", showCelsius);
+
 function showPosition(position) {
   console.log(position.coords.latitude);
   console.log(position.coords.longitude);
