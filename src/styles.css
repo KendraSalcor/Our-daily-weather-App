@@ -5,9 +5,14 @@
 }
 .card-app {
   width: 654px;
-  height: 587px;
+  height: 430px;
   display: block;
-  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  background-image: linear-gradient(
+    to top,
+    #ff9a9e 0%,
+    #fecfef 99%,
+    #fecfef 100%
+  );
   margin: 0 auto;
   margin-top: 20px;
   border-radius: 8px;
@@ -30,19 +35,25 @@
 
 .container1 {
   width: 585px;
-  height: 274px;
+  height: 300px;
   display: block;
   margin: auto;
-  background-color: #fff;
-  background-image: url(img/Sunny.svg);
+  background-color: #ffff;
+  background-image: url(img/stayhome.svg);
   background-repeat: no-repeat;
-  background-size: 322px 356px;
+  background-size: 220px 390px;
   background-position: center;
+
   border-radius: 6px;
-  margin-bottom: 20px;
+
   border: 2px solid #dcafe3;
 }
-
+#iconweather {
+  margin-top: 5px;
+  height: 64px;
+  width: 64px;
+  float: left;
+}
 .second-title {
   width: 585px;
   height: 21px;
@@ -80,6 +91,7 @@
 .typeweather {
   font-family: "Alegreya Sans", sans-serif;
   font-size: 24px;
+  text-transform: capitalize;
 }
 
 input {
@@ -146,7 +158,7 @@ footer {
 }
 
 .mainTemperature {
-  font-size: 74px;
+  font-size: 54px;
   float: left;
   color: #95389e;
   font-weight: bold;
@@ -155,8 +167,8 @@ footer {
 .degrees {
   float: left;
   font-size: 16px;
-  margin-top: 25px;
-  width: 150px;
+  margin-top: 17px;
+  width: 50px;
 }
 
 .minimun {
@@ -171,13 +183,14 @@ footer {
   font-size: 20px;
   color: #95389e;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .wind {
   margin-right: 30px;
 }
 .numberproperties {
   font-weight: bold;
+  color: black;
 }
 .wind2 {
   margin-right: 30px;
@@ -196,30 +209,14 @@ footer {
   margin-top: 15px;
 }
 
-.week {
-  margin-left: 0px;
-}
-
-.name {
-  width: 105px;
-  height: 24px;
-  padding-top: 5px;
-  text-align: center;
-  display: block;
-  font-family: Alegreya Sans, sans-serif;
-  font-size: 10px;
-  font-weight: lighter;
-  color: #95389e;
-}
-
 #fahrenheit {
   text-decoration: none;
   color: #95389e;
 }
 
 .picture {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   display: block;
   margin: 0 auto;
   padding-top: 9px;
@@ -243,4 +240,7 @@ footer {
   width: 30%;
   font-weight: bold;
   transition: all ease-in-out 5ms;
+}
+.name {
+  font-size: 18px;
 }

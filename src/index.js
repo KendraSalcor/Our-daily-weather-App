@@ -41,6 +41,21 @@ h4.innerHTML = `${day}, ${month} ${date}`;
 let time = document.querySelector("time");
 time.innerHTML = `${hour}:${minutes}:${seconds}`;
 
+function hourtime(timestamp) {
+  let hour = now.getHours();
+  if (hour < 10) {
+    hour = "0" + hour;
+  } else {
+    hour = hour + "";
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  } else {
+    minutes = minutes + "";
+  }
+  return `${hour}:${minutes}`;
+}
 //search city
 
 function showcity(event) {
@@ -64,8 +79,10 @@ form.addEventListener("click", showcity);
 function showWeather(response) {
   console.log(response);
 
+  celsiusTemperature = response.data.main.temp;
+
   let cityWeather = document.querySelector("#currentTemp");
-  cityWeather.innerHTML = Math.round(response.data.main.temp);
+  cityWeather.innerHTML = Math.round(celsiusTemperature);
 
   let cityName = response.data.name;
   let nameCity = document.querySelector("#newCity");
@@ -79,7 +96,7 @@ function showWeather(response) {
   let minimunTemp = document.querySelector("#miniTemp");
   minimunTemp.innerHTML = `${mintemp}℃`;
 
-  let weatherdescription = response.data.weather[0].main;
+  let weatherdescription = response.data.weather[0].description;
   let mainDescription = document.querySelector("#description");
   mainDescription.innerHTML = `${weatherdescription}`;
 
@@ -89,17 +106,23 @@ function showWeather(response) {
 
   let Wind = Math.round(response.data.wind.speed);
   let windSpeed = document.querySelector("#windElement");
-  windSpeed.innerHTML = `${Wind} m/s`;
+  windSpeed.innerHTML = `${Wind} Km/h`;
+  iconweather.innerHTML;
+  let newIcon = document.querySelector("#iconweather");
+  newIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function convertToFarenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#currentTemp");
   let temperature = temperatureElement.innerHTML;
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
 }
 
-let fahrenheitlink = document.querySelector("#fahrenheit-link");
+let fahrenheitlink = document.querySelector("#fahrenheit");
 fahrenheitlink.addEventListener("click", convertToFarenheit);
 
 function showPosition(position) {
@@ -118,3 +141,6 @@ function currentPosition() {
 
 let button = document.querySelector("#currentButton");
 button.addEventListener("click", currentPosition);
+
+let celsiusTemperature = null;
+currentPosition("position");
