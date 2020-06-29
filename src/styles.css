@@ -7,12 +7,7 @@
   width: 654px;
   height: 430px;
   display: block;
-  background-image: linear-gradient(
-    to top,
-    #ff9a9e 0%,
-    #fecfef 99%,
-    #fecfef 100%
-  );
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   margin: 0 auto;
   margin-top: 20px;
   border-radius: 8px;
